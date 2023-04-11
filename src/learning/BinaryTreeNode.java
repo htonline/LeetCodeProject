@@ -6,9 +6,11 @@ package learning;
  * @describe 定义一个二叉树的节点
  */
 public class BinaryTreeNode {
-    int value;
-    BinaryTreeNode left;
-    BinaryTreeNode right;
+    public int value;
+    public BinaryTreeNode left;
+    public BinaryTreeNode right;
+
+
     public BinaryTreeNode(int value) {
         this.value = value;
         left = null;
