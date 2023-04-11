@@ -9,7 +9,11 @@ public class BinaryTree {
 
     BinaryTreeNode root; // 二叉树根节点
 
-//    往二叉树中插入节点: 比父节点小的放左子树; 比父节点大的放右子树;
+    /**
+     * 插入节点
+     * @param value
+     * 比父节点小的放左子树; 比父节点大的放右子树;
+     */
     public void insert(int value) {
         root = insertHelper(root, value);
     }
@@ -26,7 +30,12 @@ public class BinaryTree {
         return node;
     }
 
-//    查找节点
+
+    /**
+     * 查找节点
+     * @param value
+     * @return 返回空节点或要找的节点
+     */
     public BinaryTreeNode search(int value) {
         return searchHelper(root, value);
     }
@@ -42,7 +51,10 @@ public class BinaryTree {
         }
     }
 
-//    删除节点
+    /**
+     * 删除节点
+     * @param value
+     */
     public void delete(int value) {
         root = deleteHepler(root, value);
     }
