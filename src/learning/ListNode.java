@@ -8,6 +8,7 @@ package learning;
 
 public class ListNode {
 
+//    头节点
     public Node head;
 
 //    无参构造器, 创建一个空链表
