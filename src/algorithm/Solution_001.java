@@ -50,8 +50,6 @@ public class Solution_001 {
         for (int i : result) {
             System.out.println(i);
         }
-
-
     }
 
 }
