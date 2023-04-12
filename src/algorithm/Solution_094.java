@@ -39,16 +39,15 @@ public class Solution_094 {
         BinaryTreeNode p = root;
 
         while (p != null || !stack.isEmpty()) {
-            while (p != null) {                        // 如果p不为空, 访问它的左子树
+            while (p != null) {                        // 如果p不为空, 则一直访问它的左子树
                 stack.push(p);
                 p = p.left;
             }
-            p = stack.pop();                        // 弹出栈
-            res.add(p.value);                       // 将p的值存入结果数组(相当于输出)
+            p = stack.pop();                        // 取出最后入栈的树节点
+            res.add(p.value);                       // 将它的值存入结果数组(相当于输出)
             p = p.right;                            // 访问它的右子树
         }
     }
-
 
     /**
      * 中序遍历
