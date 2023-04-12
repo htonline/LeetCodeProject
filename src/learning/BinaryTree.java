@@ -9,6 +9,9 @@ public class BinaryTree {
 
     BinaryTreeNode root; // 二叉树根节点
 
+    public BinaryTree() {
+    }
+
     public BinaryTree(BinaryTreeNode root) {
         this.root = root;
     }
@@ -31,6 +34,25 @@ public class BinaryTree {
         } else if (value > node.value) {
             node.right = insertHelper(node.right, value);
         }
+        return node;
+    }
+
+    /**
+     * 通过数组,创建一棵树, 满足:下标i的元素,是下标为2i和2i+1的元素的父节点
+     * 所以数组中第0个元素不能算数,第1个元素才是根节点;
+     * @param arr
+     * @return
+     */
+    public BinaryTreeNode createBinaryTreeByArr(int[] arr) {
+        return createBinaryTreeByArrHelper(1, arr);
+    }
+    private BinaryTreeNode createBinaryTreeByArrHelper(int i, int[] arr) {
+        if (i >= arr.length) {      // 叶子节点
+            return null;
+        }
+        BinaryTreeNode node = new BinaryTreeNode(arr[i]);     // 创建树节点
+        node.left = createBinaryTreeByArrHelper(2*i, arr);       // 创建左孩子,并连接上
+        node.right = createBinaryTreeByArrHelper(2*i+1, arr);    // 创建右孩子,并连接上
         return node;
     }
 
