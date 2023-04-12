@@ -1,5 +1,6 @@
 package algorithm;
 
+import learning.BinaryTree;
 import learning.BinaryTreeNode;
 
 /**
@@ -10,7 +11,7 @@ import learning.BinaryTreeNode;
  *
  */
 public class Solution_101 {
-    public boolean isSymmetricHelper(BinaryTreeNode a, BinaryTreeNode b) {
+    public static boolean isSymmetricHelper(BinaryTreeNode a, BinaryTreeNode b) {
         if (a == null && b == null) {
             return true;
         }
@@ -24,7 +25,14 @@ public class Solution_101 {
     }
 
 
-    public boolean isSymmetric(BinaryTreeNode root) {
+    public static boolean isSymmetric(BinaryTreeNode root) {
         return isSymmetricHelper(root.left, root.right);
     }
+
+    public static void main(String[] args) {
+        int[] arr = {0,1,2,2,3,4,4,3};
+        BinaryTreeNode root = new BinaryTree().createBinaryTreeByArr(arr);
+        System.out.println(isSymmetric(root));
+    }
+
 }
