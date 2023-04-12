@@ -9,6 +9,10 @@ public class BinaryTree {
 
     BinaryTreeNode root; // 二叉树根节点
 
+    public BinaryTree(BinaryTreeNode root) {
+        this.root = root;
+    }
+
     /**
      * 插入节点
      * @param value
