@@ -3,7 +3,10 @@ package learning;
 /**
  * @author Zuohaitao
  * @date 2023-04-11 20:23
- * @describe 定义一个二叉树
+ * @describe 定义一个二叉搜索树:
+ *              1.非空左子树的所有键值小于其根结点的键值。
+ *              2.非空右子树的所有键值大于其根结点的键值。
+ *              3.左、右子树都是二叉搜索树。
  */
 public class BinaryTree {
 
