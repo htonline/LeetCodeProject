@@ -16,6 +16,11 @@ import learning.BinaryTreeNode;
 public class Solution_104 {
 
     public static int maxDepth(BinaryTreeNode root) {
+        /**
+         * 如果该节点是空节点, 则返回 0;
+         * 否则返回左右子树最大高度+它自身的高度 1;
+         */
+
         if (root == null) {
             return 0;
         }
