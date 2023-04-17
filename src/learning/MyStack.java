@@ -6,7 +6,7 @@ import java.util.Stack;
  * @author Zuohaitao
  * @date 2023-04-17 16:25
  * @describe
- * 栈
+ * 用数组实现栈
  */
 public class MyStack {
     private int[] stack;
